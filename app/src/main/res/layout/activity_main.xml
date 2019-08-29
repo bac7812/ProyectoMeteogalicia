@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MeteoGalicia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.martin.proyectometeogalicia.MainActivity">
+
+    <TextView
+        android:id="@+id/concelloTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="CONCELLO"
+        android:textSize="34sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ceoImageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalArriba"
+        app:layout_constraintEnd_toStartOf="@+id/numTemperaturaTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concelloTextView" />
+
+    <TextView
+        android:id="@+id/numTemperaturaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:text="0º"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalArriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ceoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/concelloTextView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHorizontalArriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <TextView
+        android:id="@+id/tendenciaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:text="Tendencia"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalIzquierda"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalArriba" />
+
+    <ImageView
+        android:id="@+id/tendenciaImageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalAbajo"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalIzquierda"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tendenciaTextView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVerticalIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <TextView
+        android:id="@+id/sensacionTermicaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:text="Sensación térmica"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalArriba" />
+
+    <TextView
+        android:id="@+id/numSensacionTermicaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:text="0º"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalAbajo"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/sensacionTermicaTextView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVerticalDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/ventoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textSize="18sp"
+        android:text="Vento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalDerecha"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalArriba" />
+
+    <ImageView
+        android:id="@+id/ventoImageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalAbajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalDerecha"
+        app:layout_constraintTop_toBottomOf="@+id/ventoTextView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHorizontalAbajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/dataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Estado actual de estación: 00/00/00 00:00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalAbajo" />
+
+    <Button
+        android:id="@+id/actualizarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataTextView"
+        android:onClick="actualizar"/>
+
+</android.support.constraint.ConstraintLayout>
